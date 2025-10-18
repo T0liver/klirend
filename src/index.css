@@ -1,0 +1,94 @@
+:root {
+    --html-background: #333336;
+    --html-color: white;
+    --input-background: black;
+    --button-background: #2ae;
+    --button-hover-background: #3cf;
+    --button-active-background: #17b;
+}
+
+.theme-light {
+    --html-background: white;
+    --html-color: #333336;
+    --input-background: #f0f0f0;
+    --button-background: #05f;
+    --button-hover-background: #16f;
+    --button-active-background: #04e;
+}
+
+html {
+    /*Font*/
+    font-family: 'Segoe UI', sans-serif;
+    /*Font mérete (16px=12pt)*/
+    font-size: 16px;
+    /*Sormagasság, 16px*1.5=24px, tipikus mostanában*/
+    line-height: 1.5;
+    /*Sötét téma sötét háttérrel*/
+    background: var(--html-background);
+    /*Sötét téma fehér betűkkel*/
+    color: var(--html-color);
+}
+
+html,
+body,
+div {
+    /* CSS reset */
+    margin: 0;
+    /* CSS reset */
+    padding: 0;
+    /* grid-re állunk át mindenhol */
+    display: grid;
+    /* Az egyetlen gyerek szülő méretű */
+    grid: minmax(0, 1fr) / minmax(0, 1fr);
+}
+
+body {
+    /* ablak méretű */
+    min-height: 100vh;
+    /* ablak méretű */
+    max-height: 100vh;
+}
+
+input,
+button,
+a {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    /* ne legyen kerete a buttonnak és az inputnak */
+    border: 0;
+    color: inherit;
+}
+
+input {
+    background: var(--input-background);
+}
+
+button {
+    /* Tágas */
+    padding: 8px 16px;
+    background: var(--button-background);;
+    color: var(--input-background);
+    /* Bold */
+    font-weight: 600;
+    /* Lekerekített */
+    border-radius: 7px;
+    /* Árnyék */
+    box-shadow: 1px 2px 10px black;
+    /* Átmenet az árnyékra és színre, ami változik */
+    transition: all 145ms ease-out;
+
+    &:hover {
+        /* Megváltoztatja a színét, ha fölé visszük az egeret */
+        background: var(--button-hover-background);
+        /* Nagyobb árnyék, ha kiemelkedik */
+        box-shadow: 2px 5px 20px black;
+    }
+
+    &:active {
+        /* Lenyomva nincs árnyék */
+        box-shadow: none;
+        /* Megváltoztatja a színét, ha aktiváljuk (lenyomjuk) */
+        background: var(--button-active-background);
+    }
+}

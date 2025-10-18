@@ -1,0 +1,21 @@
+.Login {
+    /* Felülre igazítjuk a szülőben */
+    align-self: start;
+    /* Vízszintesen középre igazítjuk a szülőben */
+    justify-self: center;
+    /* A gyerekeit vízszintesen középre igazítjuk */
+    justify-items: center;
+    /* A gyerekei között legyen 8px távolság */
+    gap: 8px;
+
+    .logo {
+        /* A logó legyen nagy */
+        font-size: 256px;
+        /* A logó alatt és fölött legyen kisebb hely, mint 1.5 sormagassággal lenne */
+        line-height: 1.1;
+        /* Sötét téma logó szín */
+        color: #2ae;
+        /* A logó vessen alig látható árnyékot */
+        text-shadow: 2px 5px 15px black;
+    }
+}
