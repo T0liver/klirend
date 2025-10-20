@@ -1,0 +1,4 @@
+.Main {
+    /* Vízszintesen két részre osztjuk 1/3 - 2/3 arányban */
+    grid-template-columns: 1fr 2fr;
+}

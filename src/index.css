@@ -23,9 +23,7 @@ html {
     font-size: 16px;
     /*Sormagasság, 16px*1.5=24px, tipikus mostanában*/
     line-height: 1.5;
-    /*Sötét téma sötét háttérrel*/
     background: var(--html-background);
-    /*Sötét téma fehér betűkkel*/
     color: var(--html-color);
 }
 
@@ -64,10 +62,14 @@ input {
     background: var(--input-background);
 }
 
+p {
+    color: var(--html-color);
+}
+
 button {
     /* Tágas */
     padding: 8px 16px;
-    background: var(--button-background);;
+    background: var(--button-background);
     color: var(--input-background);
     /* Bold */
     font-weight: 600;
@@ -91,4 +93,12 @@ button {
         /* Megváltoztatja a színét, ha aktiváljuk (lenyomjuk) */
         background: var(--button-active-background);
     }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }

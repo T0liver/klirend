@@ -1,0 +1,8 @@
+.TextInputAndButton {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px;
+    background: black;
+    align-items: center;
+    padding-right: 4px;
+}

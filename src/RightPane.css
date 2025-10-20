@@ -1,0 +1,5 @@
+.RightPane {
+    /* Függőlegesen két részre osztjuk, az alsó csak egy soros, a felső a
+    maradék helyet veszi fel */
+    grid-template-rows: 1fr auto;
+}
