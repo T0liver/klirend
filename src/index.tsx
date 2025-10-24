@@ -6,14 +6,16 @@ import { useEffect, useState } from 'preact/hooks';
 import { chatService } from './ChatService';
 
 function App() {
-	let [loggedIn, setLoggedIn] = useState(false);
+	//let [loggedIn, setLoggedIn] = useState(false);
+	let [ renderCount, setRenderCount ] = useState( 1 );
+	console.log( "App render count: " + renderCount );
 	useEffect(() => {
-		const listener = () => setLoggedIn(!!chatService.inbox);
+		const listener = () => setRenderCount( x => x + 1 );
 		chatService.addListener(listener);
 		return () => chatService.removeListener(listener);
 	}, []);
 
-	return loggedIn ? <Main /> : <Login />
+	return chatService.inbox ? <Main /> : <Login />
 }
 
 render(<App />, document.getElementById('app'));
