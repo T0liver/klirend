@@ -4,6 +4,7 @@ import { Login } from './Login';
 import { Main } from './Main';
 import { useEffect, useState } from 'preact/hooks';
 import { chatService } from './ChatService';
+import "./Pwa"
 
 function App() {
 	//let [loggedIn, setLoggedIn] = useState(false);
