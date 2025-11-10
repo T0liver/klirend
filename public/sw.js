@@ -11,3 +11,13 @@ async function impl(e) {
     }
 }
 self.addEventListener("fetch", e => e.respondWith(impl(e))); // Eseményre feliratkozás
+
+self.addEventListener('push', e => {
+    const data = e.data?.text();
+    if (data) {
+        const promise = self.registration.showNotification("Chat Notification", {
+            body: data,
+        });
+        e.waitUntil(promise);
+    }
+});

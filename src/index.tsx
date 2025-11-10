@@ -26,3 +26,5 @@ let theme = localStorage["theme"];
 if (theme) {
 	document.documentElement.classList.add('theme-light');
 }
+
+Notification.requestPermission();
